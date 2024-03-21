@@ -1,0 +1,87 @@
+POST http://localhost:8000/users
+Content-Type: application/json
+
+{
+  "username": "username33",
+  "email": "email33",
+  "password": "password33"
+}
+
+###
+
+
+POST http://localhost:8000/login
+Content-Type: application/json
+
+{
+  "username": "username2",
+  "password": "password3"
+}
+
+###
+
+POST http://localhost:8000/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxMDk3MDU3NSwianRpIjoiOTUyNjYxNzAtODA2My00OTc2LTkwYWUtYTljMmI5OTg4ODQ1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzEwOTcwNTc1LCJjc3JmIjoiODEzZDMyNGMtMWQyNC00YThlLTg5M2MtZDRlYTFhMGExMmYxIiwiZXhwIjoxNzEwOTcxNDc1fQ.BHBqOcsfkQJF62nnYICFO8hyAheGJiT38IYAcOZrK48
+
+{
+  "title": "title",
+  "content": "content",
+  "author_id": "1"
+}
+
+###
+GET http://localhost:8000/posts/1
+Content-Type: application/json
+
+{
+  "title": "title",
+  "content": "content",
+  "author_id": "1"
+}
+
+###
+GET http://localhost:8000/posts
+Content-Type: application/json
+
+{
+  "title": "title",
+  "content": "content",
+  "author_id": "1"
+}
+
+###
+
+#"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxMDk2OTI5NywianRpIjoiODRkZWVkZjAtM2ExMi00MjM3LTk5NzYtOGYzYzIzOWNkYjE4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzEwOTY5Mjk3LCJjc3JmIjoiM2ZjZjJjZTUtZTczYS00NjY0LThkMDktMzNlNDQzZGJiYWMzIiwiZXhwIjoxNzEwOTcwMTk3fQ.jTBGo73tgI3qHdvy-Q7PsVb3rkfLKTTPcn1mLfYF_fo",
+
+
+GET http://localhost:8000/users/1
+Content-Type: application/json
+
+
+###
+
+POST http://localhost:8000/logout
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxMDk3MDU3NSwianRpIjoiOTUyNjYxNzAtODA2My00OTc2LTkwYWUtYTljMmI5OTg4ODQ1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzEwOTcwNTc1LCJjc3JmIjoiODEzZDMyNGMtMWQyNC00YThlLTg5M2MtZDRlYTFhMGExMmYxIiwiZXhwIjoxNzEwOTcxNDc1fQ.BHBqOcsfkQJF62nnYICFO8hyAheGJiT38IYAcOZrK48
+
+###
+
+POST http://localhost:8000/comments
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxMDk3MTczNSwianRpIjoiYzg0NDIwMzAtMzIwZi00MWE5LTgxN2EtY2UyMWYzZWJkMGNjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzEwOTcxNzM1LCJjc3JmIjoiMjMyNDljYzEtZjBiMy00ZDFhLWIzMDAtMjdjMGRmYTNmZjU0IiwiZXhwIjoxNzExMDU4MTM1fQ._sUX4IF3O9S9Wk9E9mdBHRO1rWerZfEz1JQklyxPgNQ
+
+{
+  "content": "title comment",
+  "author_id": "content",
+  "post_id": "1"
+}
+
+###
+
+GET http://localhost:8000/posts-comments/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxMDk3MTczNSwianRpIjoiYzg0NDIwMzAtMzIwZi00MWE5LTgxN2EtY2UyMWYzZWJkMGNjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzEwOTcxNzM1LCJjc3JmIjoiMjMyNDljYzEtZjBiMy00ZDFhLWIzMDAtMjdjMGRmYTNmZjU0IiwiZXhwIjoxNzExMDU4MTM1fQ._sUX4IF3O9S9Wk9E9mdBHRO1rWerZfEz1JQklyxPgNQ
+
+
+###
